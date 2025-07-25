@@ -123,15 +123,10 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video> -->
       <img src="static/images/header.jpg" alt="">
       <h2 class="subtitle has-text-centered"><br>
         Our proposed ImageGem dataset and its applications. The left side illustrates image and generative model retrieval. On the right, we demonstrate a novel task of generative model personalization through LoRA weights-to-weights (W2W) space construction. 
@@ -139,7 +134,7 @@
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -164,39 +159,68 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Dataset overview-->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Dataset Overview</h2>
-      <img src="static/images/dataset-1.png">
+      <p>Our dataset contains 4,916,134 images, with 2,895,364 unique prompts, generated with 242,118 LoRA models after applying a safety filer. We visualize our data distribution with <a href="https://github.com/poloclub/wizmap">WizMap</a>. We use grid tiles to display keywords extracted from image prompts or model tags.</p><br>
+      <div class="figure-container">
+        <figure>
+          <img src="static/images/wizmap-images.jpg">
+<!--          <figcaption>(a) Contour plot of 1M images sampled from our dataset, visualized using UMAP to reduce the dimensionality of their CLIP embeddings.</figcaption>-->
+<!--          <h2 class="subtitle has-text-centered">UMAP embedding of 1M sampled images.</h2>-->
+        </figure>
+        <figure>
+          <img src="static/images/wizmap-loras.jpg">
+<!--          <figcaption>(b) Contour plot of LoRA model checkpoints, where each LoRA is represented by the mean embedding of its corresponding images.</figcaption>-->
+<!--          <h2 class="subtitle has-text-centered">contour plot of LoRA model checkpoints. </h2>-->
+        </figure>
+        <h2 class="subtitle has-text-centered">The left panel shows a UMAP embedding of 1M images sampled from the dataset, while the right panel illustrates a contour plot of LoRA model checkpoints. </h2>
+      </div>
+<!--      <img src="static/images/wizmap-images.png">-->
+    </div>
   </div>
 </section>
+<!-- End dataset overview-->
 
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Aggregate-level Preference Alignment</h2>
-      <img src="static/images/DPO.jpeg">
-      <p><br>Qualitative DiffusionDPO results comparison of images generated with OOD prompts in three topics sampled from DiffusionDB. For each prompt, random seed and all other hyperparameters are kept the same. Zoom in for the best view.</p>
+      <p>We sampled three topics: Cars, Dogs, Scenery, from both our ImageGEM dataset and <a href="https://stability.ai/research/pick-a-pic">Pick-a-pic</a>, and trained <a href="https://github.com/SalesforceAIResearch/DiffusionDPO">DiffusionDPO</a> respectively.</p><br>
+      <img src="static/images/DPO.png">
+      <h2 class="subtitle has-text-centered"><br>Qualitative DiffusionDPO results comparison of images generated with OOD prompts in three topics sampled from DiffusionDB. For each prompt, random seed and all other hyperparameters are kept the same.</h2>
     </div>
   </div>
 </section>
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Retrieval and Recommendation</h2>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Retrieval and Generative Recommendation</h2>
+      <img src="static/images/recommendation.png">
     </div>
   </div>
 </section>
 
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Personalization</h2>
-      <div class="columns is-centered">
-        <img src="static/images/svd_ani-real2.jpeg" width="512px">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Generative Model Personalization</h2>
+      <p>Say something here</p><br>
+      <div class="figure-container">
+        <figure>
+          <img src="static/images/W2W-real2ani.png">
+        </figure>
+        <figure>
+          <img src="static/images/W2W-ani2real.png">
+        </figure>
       </div>
+      
+      <br><p>Say something here</p><br>
+      <img src="static/images/multi_user_alignment.png">
+
     </div>
   </div>
 </section>

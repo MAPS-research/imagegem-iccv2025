@@ -133,5 +133,25 @@ body {
   font-size: smaller;
 }
 
+.figure-container {
+  display: flex;
+  gap: 5%; /* Optional: space between the figures */
+  flex-wrap: wrap; /* Optional: allows wrapping on small screens */
+}
 
+.figure-container figure {
+  flex: 1 1 45%; /* Allow figures to take up about 45% of the container */
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+color: blue;
+text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
