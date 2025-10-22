@@ -155,3 +155,8 @@ a:hover {
   font-weight: bold;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
